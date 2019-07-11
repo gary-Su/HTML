@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>最近浏览</title>
+        <style type="text/css">
+           body{
+               font-size: 12px;
+           }
+           *{
+               margin: 0px;
+               padding: 0px;
+           }
+           div#view{
+               border: 1px solid gray;
+               width: 224px;
+               height: 294px;
+               padding-top: 16px; /*父容器的上填充*/
+               padding-left: 16px;/*父容器的左填充*/
+           }
+           div#view dl dt{
+               float: left;/*图片和文本一行*/
+               margin-right: 5px;/*图片和文本的距离*/
+           }
+           div#view dl{
+               width: 206px;
+               height: 72px;
+               border-bottom: 1px dashed gray;/*商品下方的虚线边框*/
+               margin-bottom: 10px;/*每个商品上下的间距*/
+           }
+           div#view dl dd{
+               line-height: 20px;/*文本的行高*/
+           }
+
+           div#view dl dd span.discount{
+               font-size: 16px;
+               color: #F60;
+           }
+
+           div#view dl dd span.price{
+               text-decoration: line-through;/*原价的删除线*/
+           }
+
+
+        </style>
+    </head>
+    <body>
+       <div id="view">
+           <dl>
+               <dt><img src="images/lastview1.jpg"/></dt>
+               <dd>影城电影票1张<span class="discount">&yen;24.5</span><span class="price">&yen;70</span></dd>
+           </dl>
+           <dl>
+				<dt><img src="images/lastview2.jpg" /></dt>
+				<dd>火锅星双人餐<span class="discount">&yen;88</span><span class="price">197</span>
+				</dd>
+			</dl>
+			<dl>
+				<dt><img src="images/lastview3.jpg" /></dt>
+				<dd>酸菜鱼火锅3-5人套餐，
+					<span class="discount">&yen;99</span><span class="price">287</span>
+				</dd>
+			</dl>
+       </div>
+    </body>
+</html>

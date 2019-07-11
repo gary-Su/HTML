@@ -1,0 +1,36 @@
+body {
+	font-size: 12px;
+}
+form fieldset {
+	border: 2px solid #900;
+	/*改变默认的3D边框*/
+	width: 260px;
+}
+form fieldset legend {
+	font: bold 15px Verdana,sans-serif;
+	/*设置legend标题*/
+	color: #F90;
+	margin-left: 20px;
+}
+/*设置表单元素前的文本格式*/
+form input.txt {
+	border: 1px solid #dedede;
+	width: 120px;
+	height: 20px;
+	line-height: 20px;
+}
+/*设置按钮的样式*/
+form input.btn {
+	border: 1px solid #dedede;
+	height: 25px;
+	line-height: 25px;
+	width: 40px;
+	font: bold 12px Verdana,sans-serif;
+}
+
+.label{
+	text-align: right;
+}
+.submit{
+	text-align: center;
+}
