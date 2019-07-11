@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>购购乐页眉</title>
+<link href="css/globle.css" rel="Stylesheet" type="text/css"/>
+<style type="text/css">
+    #menu{
+        height: 33px;
+        width: 985px;/*内容固定宽度*/
+        margin: 0px auto;/*固定宽度且居中*/
+    }
+    /*每项通用样式*/
+    #menu ul li{
+        float: left;
+        line-height: 33px;
+        height: 33px;
+    }
+
+    #menu ul li.city{
+        width: 620px;
+        font-weight: bold;
+    }
+
+    #menu ul li.space{
+        margin: 0px 10px;
+    }
+/*购物车背景图片*/
+#menu ul li.space span{
+    background-image: url(images/icon.gif);
+    width: 18px;
+    height: 33px;
+    background-position: 0px -85px;
+    display: block;
+    float: left;
+    margin-top: 8px;/*背景图片和文字垂直方向对齐*/
+}
+</style>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li class="city">长沙<a href="#">[切换城市]</a></li>
+            <li >购乐乐，每天乐乐购</li>
+            <li class="space"><a href="#">购乐中心</a></li>
+            <li class="space"><span></span><a href="#">购物车</a></li>
+            <li class="space"><a href="#">[登录]</a></li>
+            <li class="space"><a href="#">[注册]</a></li>
+        </ul>
+    </div>
+</body>
+</html>
