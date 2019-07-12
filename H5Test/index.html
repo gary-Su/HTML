@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <title>H5响应式测试</title>
+        <link href="css/globle.css" rel="Stylesheet" type="text/css" />
+        <style type="text/css">
+            #header{
+                width: 100%;/*自适应宽度，占据整个屏幕*/
+                height: 33px;
+                background-color: black;
+            }
+            #top{
+                color: aliceblue;
+                height: 33px;
+                width: 985px;/*内容固定宽度*/
+                margin: 0px auto;/*固定宽度且居中*/
+            }
+            /*每项通用样式*/
+            #top ul li{
+                float: left;
+                line-height: 33px;
+                height: 33px;
+            }
+
+            #top ul li.city{
+                width: 500px;
+                font-weight: bold;
+            }
+
+            #top ul li.space{
+                margin: 0px 10px;
+            }
+            /*购物车背景图片  background-position: 0px -85px;*/
+            #top ul li.space span{
+            width: 18px;
+            height: 33px;
+            display: block;
+            float: left;
+            margin-top: 8px;/*背景图片和文字垂直方向对齐*/
+            }
+            #search{
+                height: 73px;
+                background-color: #E2E5E6;
+            }
+            #search ul li{
+                float: left;
+                height: 73px;
+              
+            }
+            #search ul li.logo{
+                padding-top: 15px;
+                margin-left: 50px;
+                margin-right: 100px;
+            }
+
+            #search ul li.se{
+                padding-top: 15px;
+                padding-left: 450px;
+                height: 48px;
+            }
+
+            #search input#setxt{
+                height: 40px;
+                line-height: 40px;
+                border:1px solid blue;
+                width: 365px;
+                background-repeat: no-repeat;
+            }
+            #search input#btn{
+                color: antiquewhite;
+                width: 100px;
+                height: 42px;
+                line-height: 42px;
+                background-color: blue;
+                border: none;
+            }
+
+            #search ul li.keyword{
+                margin: 0px 7px
+            }
+
+
+            .nav {
+                width: 100%;
+				background: #3399FE;
+				color:#FFFFFF;
+				height: 30px;
+				line-height: 30px;
+			}
+			/*	overflow: hidden;*/
+			.nav ul {
+				list-style: none;
+			}
+			
+			.nav ul li {
+				width: 100px;
+                float: left;
+			}
+			
+			.nav ul li a {
+				color: #FFFFFF;
+			}
+			@media all and (max-width: 768px) {
+				/* 适合很低分辨率桌面浏览器和竖屏iPad */
+				.nav {					
+					background: #FF00FF;
+				}
+			}			
+			@media all and (max-width: 480px) ,all and (max-width: 320px) {
+				/* 适合iPhone/Android */
+				.nav {					
+					background: #0000FF;
+				}
+				.nav li a{
+					display: none;
+				}
+			}			
+			@media all and (max-width: 240px) {
+				/* 适合低分辨率移动设备 */
+				.nav{
+					display: none;
+				}
+            }
+            
+            #menu-banner{
+                height: 300px;
+                background-color: #E2E5E6;
+            }
+            #menu table{
+              width: 20%;
+              height: 300px;
+              float: left;
+              background-color: #3399FE;
+            }
+           
+        </style>
+        <style>
+             #box{
+                height: 300px;
+                overflow: hidden;
+                margin: 0 auto; 
+             }
+            .photo {
+                width: 7200px;				
+                animation: switch 12s ease-out infinite;
+            }						
+            .photo>img {
+                float: left;
+                width: 1200px;
+                height: 300px;
+            }			
+            /*@keyframes 规则用于创建动画*/			
+            @keyframes switch {	
+                0%,				
+                10% {margin-left: 0;}				
+                20%,				
+                30% {margin-left: -1200px;}				
+                40%,				
+                50% {margin-left: -2400px;}				
+                60%,				
+                70% {margin-left: -3600px;}				
+                80%,				
+                90% {margin-left: -4800px;}				
+                99%,				
+                100% {margin-left: -6000px;}			
+            }
+
+        </style>
+        <style>
+             div#view dl{
+                 width: 19%;
+               float: left;/*图片和文本一行*/
+               margin-right: 5px;/*图片和文本的距离*/
+           }
+        </style>
+        <script type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <div id="top">
+                <ul>
+                    <li class="city">欢迎光临Change商城 【<a href="#">登录</a>|<a href="#">注册</a>】</li>
+                    <li class="space"><img src="images/finger.png" width="18px" height="18px"/><a href="#">Change商城</a></li>
+                    <li class="space">|</li>
+                    <li class="space"><a href="#">我的Change</a></li>
+                    <li class="space">|</li>
+                    <li class="space"><img src="images/shoppingCar.png" width="18px" height="18px"/><a href="#">购物车</a></li>
+                    <li class="space">|</li>
+                    <li class="space"><a href="#">收藏夹</a></li>
+                    <li class="space">|</li>
+                    <li class="space"><a href="#">登录后台</a></li>
+                </ul>
+            </div><!--页眉菜单结束-->
+            <div id="search">
+                <ul>
+                    <li class="logo"><a href="#"><img src="images/change.jpg" width="130" height="53"/></a></li>
+                    <li class="se">
+                        <form>
+                            <input type="text" id="setxt"/><input type="button" value="搜搜" id="btn" style="position:relative;top:-1px;left:0px"/>
+                        </form>
+                    </li>
+                </ul>
+            </div><!--页眉搜索结束-->
+            <div class="nav">
+                <ul>
+                    <li style="margin-left: -250px;"><a href="#">全部商品分类</a></li>
+                    <li>
+                        <a href="#">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">促销活动</a>
+                    </li>
+                    <li>
+                        <a href="#">大宗礼品</a>
+                    </li>
+                    <li>
+                        <a href="#">活动咨询</a>
+                    </li>
+                </ul>
+            </div><!--菜单结束-->
+            <div id="menu-banner">
+                <div id="menu">
+                    <table>
+                        <tr>
+                            <td rowspan="2">服装</td>
+                            <td>上装</td>
+                            <td>裤子</td>
+                            <td>裙子</td>                           
+                        </tr>
+                        <tr>
+                            <td>帽子</td>
+                            <td>鞋子</td>
+                            <td>手套</td>                         
+                        </tr>
+                        <tr>
+                            <td rowspan="2" >数码</td>
+                            <td>上装</td>
+                            <td>裤子</td>
+                            <td>裙子</td>                           
+                        </tr>
+                        <tr>   
+                            <td>帽子</td>
+                            <td>鞋子</td>
+                            <td>手套</td>                         
+                        </tr>
+                        <tr>
+                            <td rowspan="2" >家居</td>
+                            <td>上装</td>
+                            <td>裤子</td>
+                            <td>裙子</td>                           
+                        </tr>
+                        <tr>   
+                            <td>帽子</td>
+                            <td>鞋子</td>
+                            <td>手套</td>                         
+                        </tr>
+                        <tr>
+                            <td rowspan="2" >美妆</td>
+                            <td>上装</td>
+                            <td>裤子</td>
+                            <td>裙子</td>                           
+                        </tr>
+                        <tr> 
+                            <td>帽子</td>
+                            <td>鞋子</td>
+                            <td>手套</td>                         
+                        </tr>
+                        <tr>
+                            <td rowspan="2">美食</td>
+                            <td>上装</td>
+                            <td>裤子</td>
+                            <td>裙子</td>                           
+                        </tr>
+                        <tr>
+                            <td>帽子</td>
+                            <td>鞋子</td>
+                            <td>手套</td>                         
+                        </tr>
+                        <tr>
+                            <td rowspan="2">母婴</td>
+                            <td>上装</td>
+                            <td>裤子</td>
+                            <td>裙子</td>                           
+                        </tr>
+                        <tr> 
+                            <td>帽子</td>
+                            <td>鞋子</td>
+                            <td>手套</td>                         
+                        </tr>
+                    </table>
+                </div>
+                <div id="box">
+                    <div class="photo">
+                        <img src="images/banner1.jpg" alt="banner1"/>
+                        <img src="images/banner2.jpg" alt="banner2"/>
+                        <img src="images/banner3.jpg" alt="banner3"/>
+                        <img src="images/banner4.jpg" alt="banner4"/>
+                        <img src="images/banner5.jpg" alt="banner5"/>
+                        <img src="images/banner6.jpg" alt="banner6"/>
+                    </div>
+                </div>
+               
+            </div><!--轮播图-->
+            <div id="closing">
+                <div><div style="text-align: left;background-color: #F06B93">1F-服装区 <div style="text-align: right">更多>>></div></div>
+            <div id="view">
+                <dl>
+                    <dt><img src="images/c1.jpg"/></dt>
+                    <dd>蓝碧草板鞋</dd>
+                    <dd>&yen;121</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/c2.jpg"/></dt>
+                    <dd>太平鸟</dd>
+                    <dd>&yen;600</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/c3.jpg"/></dt>
+                    <dd>班尼路男士短袖衬衣</dd>
+                    <dd>&yen;44</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/c4.jpg"/></dt>
+                    <dd>特价短袖</dd>
+                    <dd>&yen;30</dd>
+                </dl>
+                <dl>
+                <dt><img src="images/c5.jpg"/></dt>
+                    <dd>宜宾特价短袖</dd>
+                    <dd>&yen;30</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    </div>
+    </body>
+</html>
